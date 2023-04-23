@@ -9,7 +9,6 @@ import os
 import platform
 # pip install pyfiglet
 import pyfiglet
-
 import importlib
 import subprocess
 
@@ -21,6 +20,8 @@ for module in required_modules:
         importlib.import_module(module)
     except ImportError:
         subprocess.call(['pip', 'install', module])
+        os.system("clear")
+        
 
 ascii_banner = pyfiglet.figlet_format("DDoS Tools GOLDEN ATTACK\nBy GiuCoder")
 print(ascii_banner)
