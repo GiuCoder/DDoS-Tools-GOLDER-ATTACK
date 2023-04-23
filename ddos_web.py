@@ -23,7 +23,7 @@ for module in required_modules:
         os.system("clear")
         
 
-ascii_banner = pyfiglet.figlet_format("DDoS Tools GOLDEN ATTACK\nBy GiuCoder")
+ascii_banner = pyfiglet.figlet_format("DDoS Tools GOLDER ATTACK\nBy GiuCoder")
 print(ascii_banner)
 
 
