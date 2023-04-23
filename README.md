@@ -16,6 +16,7 @@ Linux
 
 ```
 apt-get install git python3 python3-pip
+
 git clone https://github.com/GiuCoder/DDoS-Tools-GOLDER-ATTACK.git
 
 cd DDoS-Tools-GOLDER-ATTACK
