@@ -6,6 +6,7 @@ import logging
 from urllib.parse import urlparse
 from threading import Thread, Lock
 import os
+import sys
 import platform
 # pip install pyfiglet
 import pyfiglet
@@ -31,6 +32,7 @@ if platform.system() == 'Linux':
     pass
 else:
     print("This script must be run as root")
+    sys.exit()
 
 # Initialize global variables
 stop_threads = False
