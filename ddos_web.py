@@ -28,9 +28,18 @@ ascii_banner = pyfiglet.figlet_format("DDoS Tools GOLDER ATTACK\nBy GiuCoder")
 print(ascii_banner)
 
 
-if os.geteuid() != 0:
-    print("This script must be run as root")
-    sys.exit()
+import platform
+import ctypes
+import sys
+
+if platform.system() == 'Linux':
+    if os.geteuid() != 0:
+        print("This script must be run as root")
+        sys.exit()
+else:
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        print("This script must be run as an administrator")
+        sys.exit()
 
 # Initialize global variables
 stop_threads = False
