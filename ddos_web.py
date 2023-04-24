@@ -28,9 +28,7 @@ ascii_banner = pyfiglet.figlet_format("DDoS Tools GOLDER ATTACK\nBy GiuCoder")
 print(ascii_banner)
 
 
-if platform.system() == 'Linux':
-    pass
-else:
+if os.geteuid() != 0:
     print("This script must be run as root")
     sys.exit()
 
